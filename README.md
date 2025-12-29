@@ -1,26 +1,36 @@
-# Backend (minimal)
+# Frontend - Simple MERN Blog
 
-Instructions:
+Fresh Vite + React + Tailwind frontend.
 
-1. Copy `.env.example` to `.env` and set `MONGODB_URI` and `JWT_SECRET`.
-2. Install dependencies:
+## Setup
 
 ```bash
-cd backend
+cd frontend
 npm install
-```
-
-3. Run in development:
-
-```bash
 npm run dev
 ```
 
-API quick reference:
+The app will start at http://localhost:5173
 
-- POST `/api/signup` { name, email, password }
-- POST `/api/login` { email, password } -> returns `token`
-- GET `/api/blogs` -> list blogs
-- POST `/api/blogs` (auth) { title, content }
-- PUT `/api/blogs/:id` (auth)
-- DELETE `/api/blogs/:id` (auth)
+## Environment Variables
+
+Create `.env` file (optional):
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+## Features
+
+- Home: View all blog posts
+- Login/Signup: User authentication
+- Create/Edit: Manage blog posts (auth required)
+- Responsive UI with Tailwind CSS
+
+## Tech Stack
+
+- Vite
+- React 18
+- React Router
+- Axios
+- Tailwind CSS
